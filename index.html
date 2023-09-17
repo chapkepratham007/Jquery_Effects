@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .h1{
+            text-align: center;
+            border:2px solid black;
+            width:20%;
+            margin-left: 40%;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+</head>
+<body>
+    <div>
+    <h1 class="h1">Jquery Effects</h1>
+    <h2>hide() and show()</h2>
+    <p>this is normal para</p>
+    <button class="hide">click to hide</button>
+    <button class="show">click to show</button>
+    <button class="change">click to change color</button>
+    <button class="toggle">click to hide and show and change color</button>
+    </div>
+    <br>
+    <h2>slideUp() and slideDown()</h2>
+    <div>
+    <p class="para">hey ,i am Pratham I am learning jquery</p>
+    <audio controls>
+    source src="" type="audio/mp3"
+    </audio>
+    <br>
+    <button class="slideup">click to slideup</button>
+    <button class="slidedown">click to slidedown</button>
+    <button class="slidetoggle">slideup and slidedown</button>
+    </div>
+    <br>
+    <div>
+        <h2>FadeIn() and FadeOut()</h2>
+        <img src="Add a subheading.jpg" alt="image" width="100%" height="300px"/>
+
+    <button class="fadeIn">click to fadein</button>
+    <button class="fadeOut">click to fadeout</button>
+    <button class="fadeToggle">fadetoggle</button>
+    </div>
+    <br>
+    <br>
+    <h2>animate()</h2>
+    <div style="width:200px;height:200px;border:2px solid black;background-color: green;position:relative" class="box"></div>
+    <button class="btn">click to animate</button>
+
+    <script>
+        //jquery hide show
+
+        $(document).ready(function(){
+            $(".hide").click(function(){
+                $("p").hide();
+            })
+        })
+
+        $(document).ready(function(){
+            $(".show").click(function(){
+                $("p").show();
+            })
+        })
+
+        $(document).ready(function(){
+            $(".toggle").click(function(){
+                $("p").toggle();
+                $("p").css("background-color","green");
+                $("p").css("color","white");
+                $("p").css("font-size","20px");
+                $("p").css("width","15%");
+            })
+        })
+
+        $(document).ready(function(){
+            $(".change").click(function(){
+                $("p").css("background-color","green");
+                $("p").css("color","white");
+                $("p").css("font-size","20px");
+                $("p").css("width","15%");
+            })
+        })
+
+        //jquery slideup and down
+
+        $(document).ready(function(){
+            $(".slideup").click(function(){
+                $("audio").slideUp();
+                $(".para").slideUp();
+            })
+        })
+
+        $(document).ready(function(){
+            $(".slidedown").click(function(){
+                $("audio").slideDown();
+                $(".para").slideDown();
+            })
+        })
+
+        $(document).ready(function(){
+            $(".slidetoggle").click(function(){
+                $("audio").slideToggle();
+                $(".para").slideToggle();
+            })
+        })
+        //fade in fade out
+        $(document).ready(function(){
+            $(".fadeIn").click(function(){
+                $("img").fadeIn(3000);
+            })
+        })
+
+        $(document).ready(function(){
+            $(".fadeOut").click(function(){
+                $("img").fadeOut(3000);
+            })
+        })
+
+        $(document).ready(function(){
+            $(".fadeToggle").click(function(){
+                $("img").fadeToggle(2000);
+            })
+        })
+
+        $(document).ready(function(){
+            $(".btn").click(function(){
+                $(".box").animate({left:"+=200px"},3000);
+            })
+        })
+
+       
+    </script>
+</body>
+</html>
